@@ -1,0 +1,11 @@
+--- xclim-0.48.0/xclim/sdba/_adjustment.py
++++ xclim-0.48.0/xclim/sdba/_adjustment.py
+@@ -159,7 +159,7 @@
+       hist_q : Quantiles over the training data
+       sim : Data to adjust.
+     """
+-    sim_q = group.apply(u.rank, ds.sim, main_only=True, pct=True)
++    sim_q = group.apply(u.rank, ds.sim, main_only=False, pct=True)
+     af = u.interp_on_quantiles(
+         sim_q,
+         ds.quantiles,
